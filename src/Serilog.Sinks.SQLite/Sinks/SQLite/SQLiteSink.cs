@@ -190,7 +190,7 @@ namespace Serilog.Sinks.SQLite
                 new SQLiteParameter("@epoch", DbType.DateTime2)
                 {
                     Value = (_storeTimestampInUtc ? epoch.ToUniversalTime() : epoch).ToString(
-                        "yyyy-MM-ddTHH:mm:ss")
+                        "yyyy-MM-ddTHH:mm:ss.fff")
                 });
 
             return cmd;
